@@ -1,0 +1,29 @@
+[
+{
+    "username": "Hflora2010",
+    "password": "password",
+    "first_name": "Hailey",
+    "last_name": "Flora",
+    "age": "31",
+    "sex": "F",
+    "height": "63",
+    "weight": "127",
+    "goal": "125",
+    "calorie_count": "2000",
+    "email": "Haileycflora@gmail.com"
+
+},
+{
+    "username": "JoshisCool",
+    "password": "password123!",
+    "first_name": "Josh",
+    "last_name": "Molyneaux",
+    "age": "28",
+    "sex": "M",
+    "height": "72",
+    "weight": "160",
+    "goal": "170",
+    "calorie_count": "1500",
+    "email": "Josh@email.com"
+}
+]

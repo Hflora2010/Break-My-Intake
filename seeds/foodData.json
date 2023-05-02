@@ -1,0 +1,20 @@
+[
+    {
+        "food_name": "Banana",
+        "calories": 100,
+        "serving_size": 1,
+        "quanity": 0
+    },
+    {
+        "food_name": "Avocado",
+        "calories": 235,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Apple",
+        "calories": 125,
+        "serving_size": 1,
+        "quanity": 1
+    }
+]

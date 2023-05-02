@@ -37,27 +37,27 @@ User.init(
       allowNull: false,
     },
     age: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     sex: {
-      type: dataTypes.CHAR(1),
+      type: DataTypes.CHAR(1),
       allowNull: false
     },
     weight: {
-      type: dataTypes.DECIMAL,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     height: {
-      type: dataTypes.DECIMAL,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     goal: {
-      type: dataTypes.DECIMAL,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     calorie_count: {
-      type: dataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     email: {
