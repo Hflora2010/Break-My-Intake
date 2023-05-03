@@ -12,14 +12,14 @@ const seedDatabase = async () => {
         returning: true,
     });
     //
-    const foods = await Food.bulkCreate(foodData, {
-        individualHooks: true,
-        returning: true,
+    // const foods = await Food.bulkCreate(foodData, {
+    //     individualHooks: true,
+    //     returning: true,
         
-    });
+    // });
 
     // Associating each food to a random user and 
-    for (const food of foods) {
+    for (const food of foodData) {
         await Food.create({
             ...food,
         });
