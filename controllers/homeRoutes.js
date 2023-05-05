@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Food, User } = require('../models');
+const withAuth = require ('../utils/auth');
 
 
 router.get('/', async (req, res) => {
@@ -52,5 +53,43 @@ router.get('/signup', (req, res) => {
 
     res.render('signup');
 });
+
+router.get('/dashboard', withAuth, async (req,res)=> {
+
+    try {
+        const userData = await User.findAll({
+    
+            user_id: req.session.user_id,
+        });
+
+        //serialize 
+        const userResults = userData.map((data) => data.get({ plain: true}));
+
+        res.render('dashboard', {
+            userResults,
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
+router.get('/food', withAuth, async (req, res) => {
+    try {
+        const foodData = await Food.findAll({
+
+            user_id: req.session.user_id,
+        });
+
+        const foodResults = foodData.map((data) => data.get({ plain: true }));
+
+        console.log(foodResults)
+        res.render('food', {
+            foodResults,
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 
 module.exports = router;

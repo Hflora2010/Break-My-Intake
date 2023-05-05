@@ -1,0 +1,15 @@
+<p>Click on the below text field:</p>
+<div>
+{{#each foodResults as |foodResults| }}
+<div class="dropdown">
+<input type="text" id="droptxt" class="list" readonly>
+    <div id="content" class="content">
+        <div class="list">
+            <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.food_name}}" />
+            <label for="foodlist" class="list"> {{foodResults.food_name}} / {{foodResults.calories }} {{foodResults.serving_size }}</label>
+            <input type="hidden" class="list quantity" min="1" value="quantity" />
+        </div>
+        {{/each}}
+    </div>
+</div>
+</div>
