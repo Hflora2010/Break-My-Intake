@@ -18,14 +18,26 @@ window.onclick = function( e ) {
         console.log(e.target)
         if ( content.classList.contains( 'show' ) ) {
             content.classList.remove( 'show' ) 
+            for (let a = 0; a < quantity.length; a++) {
+                list[a].checked = false;
+            }
         } else if ( content2.classList.contains( 'show' ) ) {
-            content2.classList.remove( 'show' ) 
+            content2.classList.remove( 'show' )
+            for (let a = 0; a < quantity.length; a++) {
+                list[a].checked = false; 
+            }
         } else if ( content3.classList.contains( 'show' ) ) {
-            content3.classList.remove( 'show' ) 
+            content3.classList.remove( 'show' )
+            for (let a = 0; a < quantity.length; a++) {
+                list[a].checked = false; 
+            }
         } else if ( content4.classList.contains( 'show' ) ) {
-            content4.classList.remove( 'show' ) 
+            content4.classList.remove( 'show' )
+            for (let a = 0; a < quantity.length; a++) {
+                list[a].checked = false; 
+            }
         } else {
-            console.log('Ya fucked up')
+            console.log('Unable to populate food in categories')
         }
     }
 }
@@ -48,11 +60,11 @@ function calc() {
         for ( var i = 0, arr = []; i < list.length; i++ ) {
             if ( list[ i ].checked ) arr.push( quantity[ i ].value + ' x ' + list[ i ].value )
         }
+        console.log(list)
 
         txt.value = arr.join( ', ' )
 
         return;
-
     } else if ( content2.classList.contains( 'show' ) ) {
 
         for ( var j = 0, arr2 = []; j < list.length; j++ ) {
@@ -85,7 +97,6 @@ function calc() {
         
     }
 }
-
 
 txt.addEventListener( 'click', function() {
     content.classList.toggle( 'show' )
