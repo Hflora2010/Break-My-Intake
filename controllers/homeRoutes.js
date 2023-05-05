@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Food, User } = require('../models');
 const withAuth = require ('../utils/auth');
 
-
+// renders homepage route on nav to base localhost link 
 router.get('/', async (req, res) => {
     // tries to render homepage handlebar, if unable to then throws an error 
     try {
@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
 
 });
 
+//renders the calculate bmi page 
 router.get('/calculatebmi', async (req, res) => {
 
     try {
