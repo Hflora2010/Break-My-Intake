@@ -1,20 +1,28 @@
-
 <body>
-    <h1>Complete Your Profile</h1>
+    <h1>Welcome, {{userResults.first_name}}! </h1>
+    <h2>Please Complete Your Profile Below</h2>
     <div class="card">
       <h3>Personal Info</h3>
         <div class="personalInfo">
-            Content for name, age, and username goes here
+            <p>Name {{userResults.first_name}} {{userResults.last_name}}
+            <p>Username {{userResults.username}}</p>
+            <p>Email {{userResults.email}}</p>
+            {{!-- Content for name, age, and username goes here --}}
         </div>
         <div class="personalInfo">
-            Content for weight, age, and height goes here
+            <p>Age {{ userResults.age }} Years Old</p>
+            <p>Weight {{ userResults.weight }} Pounds</p>
+            <p>Height {{ userResults.height }} Inches</p>
         </div>
         <div class="personalInfo">
-            <h6>Activity Level</h6>
-            Activity content goes here
+            <p> Goal {{ userResults.goal }} Pounds </p>
+            <p>Activity Level</p>
         </div>
+        </div>
+        <div class="caloriechart">
+            {{!-- all of the chart information will go here  --}}
         </div>
         <div>
-        <button class="btn" type="submit">Edit</button>
+        <a href="/update-dashboard" class="btn">Edit Profile</a>
     </div>
 </body>

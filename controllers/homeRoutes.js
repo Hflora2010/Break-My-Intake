@@ -58,17 +58,69 @@ router.get('/signup', (req, res) => {
 router.get('/dashboard', withAuth, async (req,res)=> {
 
     try {
-        const userData = await User.findAll({
-    
-            user_id: req.session.user_id,
-        });
+        const userData = await User.findByPk(req.session.user_id);
+
+        if(!userData) {
+            res.redirect('/login');
+            return;
+        }
 
         //serialize 
-        const userResults = userData.map((data) => data.get({ plain: true}));
+        const userResults = userData.get({ plain: true});
 
-        res.render('dashboard', {
-            userResults,
+        res.render('dashboard', { userResults });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
+router.get('/update-dashboard', withAuth, async (req,res)=> {
+
+    try {
+        const userData = await User.findByPk(req.session.user_id);
+
+        if(!userData) {
+            res.redirect('/login');
+            return;
+        }
+
+        //serialize 
+        const userResults = userData.get({ plain: true});
+
+        res.render('update-dashboard', { userResults });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
+router.post('/update-dashboard', withAuth, async (req,res)=> {
+
+    try {
+        const userData = await User.findByPk(req.session.user_id);
+
+        if(!userData) {
+            res.redirect('/login');
+            return;
+        }
+
+        //serialize 
+        await userData.update({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            weight: req.body.weight,
+            height: req.body.height,
+            goal: req.body.goal,
+            activity_level: req.body.activity_level,
+
         });
+
+            await userData.save();
+            
+            const newUserData = await User.findByPk(req.session.user_id);
+            console.log(newUserData);
+
+        res.render('dashboard', { newUserData });
     } catch (err) {
         res.status(400).json(err);
     }
