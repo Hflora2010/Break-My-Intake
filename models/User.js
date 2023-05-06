@@ -64,6 +64,10 @@ User.init(
         isEmail: true,
       },
     },
+    activity_level: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
 
   {
