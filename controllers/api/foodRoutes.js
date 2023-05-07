@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 router.put('/', withAuth, async (req, res) => {
     try {
-        const userData = await User.update({ calorie_count: req.body.calorie_count }, {
+        const userData = await User.update({ calorie_count: req.body.itemCalories }, {
 
             where: { id: req.session.user_id }
         })

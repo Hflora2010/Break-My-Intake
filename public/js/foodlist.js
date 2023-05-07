@@ -12,9 +12,6 @@ list = document.querySelectorAll('.content input[type="checkbox"]');
 quantity = document.querySelectorAll('.quantity');
 
 
-let calorie_count = 0;
-
-
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (e) {
     if (!e.target.matches('.list')) {
@@ -57,8 +54,7 @@ quantity.forEach(function (item) {
     item.addEventListener('input', calc)
 })
 
-function calc() {
-
+async function calc() {
     let itemCalories = 0;
 
     if (content.classList.contains('show')) {
@@ -126,9 +122,23 @@ function calc() {
         txt4.value = arr4.join(', ')
 
     }
-    calorie_count += itemCalories;
     console.log(itemCalories);
 
+    if (itemCalories > 0) {
+        const response = await fetch(`/api/food`, {
+            method: 'PUT',
+            body: JSON.stringify({ itemCalories }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.ok) {
+            console.log("Added updates successfully");
+        } else {
+            alert('Failed to store added meal calories');
+        }
+    }
 
 }
 
