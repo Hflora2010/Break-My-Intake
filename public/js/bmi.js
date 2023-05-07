@@ -177,7 +177,7 @@ result.innerHTML = resultDiv.outerHTML;
 // );
 };
 
-
+//this is test comment 
 document
     .querySelector('.bmi-form')
     .addEventListener('submit', bmiCalculator);
