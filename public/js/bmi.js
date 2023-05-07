@@ -76,7 +76,7 @@ const bmiCalculator = async (event) => {
 // create a result dive to wrap result values table and disclaimer in it  
 
 var resultDiv = document.createElement('div')
-  var resultp = document.createElement('p')
+  var resultp = document.createElement('h3')
   resultp.textContent  = `Your BMI is : ${bmi.toFixed(2)}, and it falls in  ${category} category`;
   // document.body.append(resultDiv)
   resultDiv.append(resultp)
@@ -142,6 +142,29 @@ resultDiv.append(table)//this works
 // Create the disclaimer paragraph element
 const disclaimer = document.createElement('p');
 disclaimer.innerHTML = '<strong>Disclaimer:</strong> This BMI calculator is for informational purposes only and should not be used to diagnose or treat any medical condition. Always consult with a qualified healthcare professional before making any changes to your diet, exercise, or medication regimen. The results of this calculator are based on average values and should not be interpreted as medical advice. Please note that BMI calculations may not be accurate for individuals with certain health conditions or body types. By using this calculator, you agree to assume all risk associated with the use of the calculator and the information provided.';
+
+
+// !!!not sure what the issue is. can get the text to hide, but can't get the function to work so it unhides the text!!!
+
+// const disclaimer = document.createElement('h3');
+// disclaimer.innerHTML = '<strong>Disclaimer:</strong> This BMI calculator is for informational purposes only <span id="dots">..</span><span id="readMore"> and should not be used to diagnose or treat any medical condition. Always consult with a qualified healthcare professional before making any changes to your diet, exercise, or medication regimen. The results of this calculator are based on average values and should not be interpreted as medical advice. Please note that BMI calculations may not be accurate for individuals with certain health conditions or body types. By using this calculator, you agree to assume all risk associated with the use of the calculator and the information provided.</span><button class="hideText" onclick = "toggle()" id="myBtn">read more</button>';
+
+// function toggle() {
+//     var dots = document.getElementById("dots");
+//     var moreText = document.getElementById("readMore");
+//     var btnText = document.getElementById("myBtn");
+  
+//     if (dots.style.display === "none") {
+//       dots.style.display = "inline";
+//       btnText.innerHTML = "read more";
+//       moreText.style.display = "none";
+//     } else {
+//       dots.style.display = "none";
+//       btnText.innerHTML = "read less";
+//       moreText.style.display = "inline";
+//     }
+//   }
+
 
 // Add the disclaimer to the document
 // document.body.appendChild(disclaimer);
