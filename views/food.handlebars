@@ -7,7 +7,7 @@
         <div id="content" class="content">
             {{#each foodResults as |foodResults| }}
             <div class="list food-container">
-                <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.food_name}}" />
+                <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.calories}}" />
                 <label for="foodlist" class="list"> {{foodResults.food_name}} / {{foodResults.calories }} cal, {{foodResults.serving_size }} serv</label>
                 <input type="hidden" class="list quantity" min="1" value="1" />
             </div>
@@ -21,7 +21,7 @@
         <div id="content2" class="content">
             {{#each foodResults as |foodResults| }}
             <div class="list food-container">
-                <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.food_name}}" />
+                <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.calories}}" />
                 <label for="foodlist" class="list"> {{foodResults.food_name}} / {{foodResults.calories }} cal,
                     {{foodResults.serving_size }} serv</label>
                 <input type="hidden" class="list quantity" min="1" value="1" />
@@ -36,7 +36,7 @@
         <div id="content3" class="content">
             {{#each foodResults as |foodResults| }}
             <div class="list food-container">
-                <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.food_name}}" />
+                <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.calories}}" />
                 <label for="foodlist" class="list"> {{foodResults.food_name}} / {{foodResults.calories }} cal,
                     {{foodResults.serving_size }} serv</label>
                 <input type="hidden" class="list quantity" min="1" value="1" />
@@ -51,7 +51,7 @@
         <div id="content4" class="content">
             {{#each foodResults as |foodResults| }}
             <div class="list">
-                <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.food_name}}" />
+                <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.calories}}" />
                 <label for="foodlist" class="list"> {{foodResults.food_name}} / {{foodResults.calories }} cal, 
                     {{foodResults.serving_size }} serv</label>
                 <input type="hidden" class="list quantity" min="1" value="1" />
