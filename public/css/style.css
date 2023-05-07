@@ -20,10 +20,17 @@
     font-size: 2.5rem;
     padding: 70px;
   }
+
+  h2 {
+    color: white;
+    font-size: 2rem;
+    padding: 70px;
+  }
+
   h3 {
     color: white;
-    font-size: 1.8rem;
-    padding-bottom: 50px;
+    font-size: 1.5rem;
+    padding: 0 20px 50px;
   }
   p {
     color: white;
@@ -117,9 +124,11 @@
   border-radius: 10px;
   height: 70vh;
   margin: 10px auto;
-  
   width: 70vw;
+}
 
+.main h1 {
+  padding: 60px;
 }
 
   .message {
@@ -132,8 +141,7 @@
     z-index: 1;
   }
 
-  #readMore {
-    /* color: #0A5AEE; */
+  #readMore, #readMore1, #readMore2 {
     display: none;
   }
 
@@ -144,19 +152,21 @@
     color: #245624;
     cursor: pointer;
     overflow: hidden;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-decoration: underline;
   }
+  
   
   .container {
     display: flex;
     justify-content: space-between;
     margin: 50px 15px 0;
   }
+
   
   .review {
-    width: 45%;
-    margin-top: 20px;
+    width: 60%;
+    /* margin-top: 20px; */
   }
   
   .reviewer {
@@ -181,6 +191,26 @@
     margin: 0;
     color: #245624;
   }
+  .review p{
+    font-size: 0.8rem;
+    /* padding: 40px; */
+   }
+
+  @media (max-width: 1200px){
+    h1 {
+         font-size: 1.8rem;
+         margin-bottom: 30px;
+         padding: 50px;
+     }
+     h3 {
+      font-size: 1rem;
+      margin-bottom: 40px;
+     }
+     
+     .message {
+      width: 80%;
+    }
+   }
 
 
 /* signup/login.handlebars */
