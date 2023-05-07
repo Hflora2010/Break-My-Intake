@@ -10,27 +10,41 @@ const updateFormHandler = async (event) => {
     const goal = document.querySelector('#goal').value.trim();
     const activity_level = document.querySelector('#activity_level').value;
 
-    if(first_name && last_name && email && weight && height && goal && email && activity_level) {
+    if(first_name && last_name && email && age && weight && height && goal && email && activity_level) {
         const response = await fetch('/update-dashboard', {
             method: "POST",
             body: JSON.stringify({
                 first_name,
                 last_name,
+                email,
+                age,
                 weight,
                 height,
                 goal,
-                email,
-                activity_level
+                activity_level,
             }),
+            
             headers: { 'Content-Type': 'application/json' },
         });
+        console.log(first_name, last_name, email, age, weight, height, goal, activity_level);
 
         if(response.ok) {
-            document.location.replace('/dashboard');
+            const updatedData = await response.json();
+            console.log(updatedData.goal);
+            document.querySelector('#first_name').value = updatedData.first_name;
+            document.querySelector('#last_name').value = updatedData.last_name;
+            document.querySelector('#email').value = updatedData.email;
+            document.querySelector('#age').value = updatedData.age;
+            document.querySelector('#weight').value = updatedData.weight;
+            document.querySelector('#height').value = updatedData.height;
+            document.querySelector('#goal').value = updatedData.goal;
+            document.querySelector('#activity_level').value = updatedData.activity_level;
         } else {
             alert(response.statusText);
         }
-    }
-};
+       } else {
+            alert('Please fill out all required fields.');
+        }
+    };
 
-document.querySelector('.personInfo').addEventListener('sumbit', (updateFormHandler))
+document.querySelector('.personalInfo').addEventListener('submit', (updateFormHandler));
