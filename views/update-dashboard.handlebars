@@ -7,11 +7,15 @@
         <div class="personalInfo">
             <div>
             <label for="first_name">First Name</label>
-            <input type="text" name="first_name" value="{{userResults.first_name}}">
+            <input id='first_name' type="text" name="first_name" value="{{userResults.first_name}}">
             </div>
             <div>
                 <label for="last_name">Last Name</label>
-                <input type="text" name="last_name" value="{{userResults.last_name}}">
+                <input id="last_name" type="text" name="last_name" value="{{userResults.last_name}}">
+            </div>
+            <div>
+                <label for"email"> Email</label>
+                <input id="email" type="text" name="email" value="{{userResult.email}}">
             </div>
             <div>
                 <p>Username {{userResults.username}}</p>
@@ -23,15 +27,15 @@
         <div class="personalInfo">
             <div>
                 <label for="age">Age</label>
-                <input type="number" name="age" value="{{userResults.age}}" Years Old>
+                <input id="age" type="number" name="age" value="{{userResults.age}}" Years Old>
             </div>
             <div>
                 <label for="weight">Weight</label>
-                <input type="number" name="weight" value="{{userResults.weight}}" Pounds>
+                <input id="weight" type="number" name="weight" value="{{userResults.weight}}" Pounds>
             </div> 
             <div>
                 <label for="height">Height</label>
-                <input type="number" name="height" value="{{userResults.height}}" Inches>
+                <input id="height" type="number" name="height" value="{{userResults.height}}" Inches>
             </div>
         </div>
         </form>
@@ -40,14 +44,16 @@
         <div class="personalInfo">
             <div>
                 <label for="goal">Your Target Goal</label>
-                <input type="number" name="goal" value="{{userResults.goal}}" Pounds>
+                <input id="goal" type="number" name="goal" value="{{userResults.goal}}" Pounds>
             </div>
         <div class="form-group">
             <label for="activity_level">Activity Level:</label>
             <select class="form-control" id="activity_level" name="activity_level">
-                <option value="not_active"> Not Active </option>
-                <option value="moderately_active"> Moderately Active </option>
-                <option value="very_active"> Very Active </option>
+                <option value="sedentary">Sedentary</option>
+                <option value="lightlyActive">Lightly Active</option>
+                <option value="moderatelyActive">Moderately Active</option>
+                <option value="veryActive">Very Active</option>
+                <option value="extraActive">Extra Active</option>
             </select>
         </div>
         </div>
