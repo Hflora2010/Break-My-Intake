@@ -1,24 +1,23 @@
-// Compile the template
-// const template = Handlebars.compile(document.getElementById("result-template").innerHTML);
 let bmi = 0;
 
 
 const bmiCalculator = async (event) => {
     event.preventDefault();
-  /// Get the form and result elements
-  // const form = document.getElementByClass("bmi-form");
+  /// Get the result elements
+
+  
   const result = document.getElementById("result");
 
 
   // Get the user input values
   const age = document.querySelector('#age').value.trim();
-  console.log(age)
+  // console.log(age)
   const sex = document.querySelector('#sex').value.trim();
-  console.log(sex)
+  // console.log(sex)
   const weight = document.querySelector('#weight').value.trim();
-  console.log(weight)
+  // console.log(weight)
   const height = document.querySelector('#height').value.trim();
-  console.log(height)
+  // console.log(height)
   // const units = document.getElementsByName("units").value;
   // console.log(units)
   // const 
@@ -29,15 +28,15 @@ const bmiCalculator = async (event) => {
   
 
   // Validate the input values
-  if (isNaN(age) || age < 0) {
+  if (isNaN(age) || age < 0 || age === "") {
     alert("Please enter a valid age.");
     return;
   }
-  if (weight < 0) {
+  if (isNaN(weight) || weight < 0 || weight === "") {
     alert("Please enter a valid weight.");
     return;
   }
-  if (height < 0) {
+  if (isNaN(height) || height < 0 || height === "") {
     alert("Please enter a valid height.");
     return;
   }
@@ -61,8 +60,8 @@ const bmiCalculator = async (event) => {
   } else {
     category = "Obese";
   }
-console.log(bmi)
-console.log(category)
+// console.log(bmi)
+// console.log(category)
 
 // var bmiResult = document.crearteElement('p')
 // bmi.textContent = bmi;
@@ -71,7 +70,104 @@ console.log(category)
 // bmi.textContent = bmi;
 
 // const result = document.getElementById("result");
-result.textContent = `BMI: ${bmi.toFixed(2)}, Category: ${category}`;
+// result.textContent = `Your BMI is : ${bmi.toFixed(2)}, and it falls in  ${category} category`;
+
+
+// create a result dive to wrap result values table and disclaimer in it  
+
+var resultDiv = document.createElement('div')
+  var resultp = document.createElement('p')
+  resultp.textContent  = `Your BMI is : ${bmi.toFixed(2)}, and it falls in  ${category} category`;
+  // document.body.append(resultDiv)
+  resultDiv.append(resultp)
+
+// result.innerHTML = resultDiv;
+// result.innerHTML = resultDiv.outerHTML; //this works
+
+// result.appendChild(resultDiv) // this works too
+
+
+
+// Create the table element
+const table = document.createElement('table');
+
+// Create the table header row
+const headerRow = document.createElement('tr');
+
+// Create the BMI header cell
+const bmiHeader = document.createElement('th');
+bmiHeader.textContent = 'BMI';
+headerRow.appendChild(bmiHeader);
+
+// Create the Weight Status header cell
+const weightStatusHeader = document.createElement('th');
+weightStatusHeader.textContent = 'Weight Status';
+headerRow.appendChild(weightStatusHeader);
+
+// Add the header row to the table
+table.appendChild(headerRow);
+
+// Create the table body rows
+const bodyRows = [
+  ['Less than 18.5', 'Underweight'],
+  ['18.5 - 24.9', 'Normal weight'],
+  ['25.0 - 29.9', 'Overweight'],
+  ['30.0 and above', 'Obesity']
+];
+
+// Loop through the body rows and create each row and cell
+for (let i = 0; i < bodyRows.length; i++) {
+  const bodyRow = document.createElement('tr');
+  
+  const bmiCell = document.createElement('td');
+  bmiCell.textContent = bodyRows[i][0];
+  bodyRow.appendChild(bmiCell);
+  
+  const weightStatusCell = document.createElement('td');
+  weightStatusCell.textContent = bodyRows[i][1];
+  bodyRow.appendChild(weightStatusCell);
+  
+  table.appendChild(bodyRow);
+}
+
+// Add the table to the document
+// document.body.appendChild(table);
+resultDiv.append(table)//this works
+
+// result.innerHTML = table.outerHTML;
+
+
+
+
+// Create the disclaimer paragraph element
+const disclaimer = document.createElement('p');
+disclaimer.innerHTML = '<strong>Disclaimer:</strong> This BMI calculator is for informational purposes only and should not be used to diagnose or treat any medical condition. Always consult with a qualified healthcare professional before making any changes to your diet, exercise, or medication regimen. The results of this calculator are based on average values and should not be interpreted as medical advice. Please note that BMI calculations may not be accurate for individuals with certain health conditions or body types. By using this calculator, you agree to assume all risk associated with the use of the calculator and the information provided.';
+
+// Add the disclaimer to the document
+// document.body.appendChild(disclaimer);
+resultDiv.append(disclaimer)//this works
+
+
+result.innerHTML = resultDiv.outerHTML;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// result.createE
+// var bmiDisclaimer = result.createE('disclaimer')
+// bmiDisclaimer.textContent = 'Disclaimer: This BMI calculator is for informational purposes only and should not be used to diagnose or treat any medical condition. Always consult with a qualified healthcare professional before making any changes to your diet, exercise, or medication regimen. The results of this calculator are based on average values and should not be interpreted as medical advice. Please note that BMI calculations may not be accurate for individuals with certain health conditions or body types. By using this calculator, you agree to assume all risk associated with the use of the calculator and the information provided.';
+// // result.appendChild(bmiCalculator)
+
+// console.log(bmiDisclaimer)
 // res.render('calculatebmi', { bmi, category });
 
   // Render the result template with the BMI and category
