@@ -449,6 +449,9 @@ h3 {
 
 /* update-dashboard.handlebars */
 
+.personalInfo {
+  margin: 10px;
+}
 
 .completeProfile {
   margin: 0 auto 20px;
@@ -458,10 +461,10 @@ h3 {
   padding: 20px;
 }
 
-.pInfo {
+/* .pInfo {
   font-size: 1.3rem;
   padding: 5px;
-}
+} */
 
 .updateCard {
   background: rgba(0, 9, 12, 0.233);
@@ -471,6 +474,12 @@ h3 {
     margin: auto;
     padding: 10px;
     width: 600px;
+}
+
+.updateCard h4 {
+  margin-bottom: 10px; 
+  font-size: 1.5rem; 
+  text-decoration: underline;
 }
 
 @media (max-width: 650px) {
@@ -484,9 +493,13 @@ h3 {
     color: #245624;
     display: inline-block;
     font-size: 1rem;
-    margin: auto 15px auto;
+    margin: auto auto 5px auto;
     text-align: right;
     width: 150px;
+}
+
+.personalInfo .form-group {
+  margin-bottom: 3px;
 }
 
 .personalInfo input,
@@ -496,7 +509,7 @@ h3 {
   /* height: 25px; */
   margin: auto 80px 10px auto;
   padding: 3px;
-  width: 200px;
+  width: 180px;
 }
 
 
