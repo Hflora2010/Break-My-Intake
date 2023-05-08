@@ -75,15 +75,15 @@
   
   ### GitHub account  
   
-  [Hailey Flora](https://github.com/Hflora2010)
-  [Muhammad Jamal](https://github.com/jamalm06)
-  [Kevin Molyneaux](https://github.com/molyneauxk93)
-  [Nestor Montanez](https://github.com)
-  [Genci Odobashi](https://github.com/odobashigenci)
+  - [Hailey Flora](https://github.com/Hflora2010)
+  - [Muhammad Jamal](https://github.com/jamalm06)
+  - [Kevin Molyneaux](https://github.com/molyneauxk93)
+  - [Nestor Montanez](https://github.com)
+  - [Genci Odobashi](https://github.com/odobashigenci)
   
   ### Email us
-  [!Hailey[General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:)
-  [!Muhammad[General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:)
-  [!Kevin[General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:)
-  [!Nestor[General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:)
-  [!Genci[General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:odobashigenci@gmail.com)
+  - Hailey [![General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:idk@yahoo.com)
+  - Muhammad [![General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:idk@yahoo.com)
+  - Kevin [![General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:idk@yahoo.com)
+  - Nestor [![General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:idk@yahoo.com
+  - Genci [![General badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:odobashigenci@gmail.com)
