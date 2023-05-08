@@ -1,52 +1,33 @@
 <body>
-    <h1>Let Us Know a Little Bit More, {{userResults.first_name}}! </h1>
-    <h2>Please Complete Your Profile Below</h2>
-    <div class="card">
-      <h3>Personal Info</h3>
+    <h1 class="knowMore">Let Us Know a Little Bit More, {{userResults.first_name}}! </h1>
+    <h2 class="completeProfile">Please Complete Your Profile Below</h2>
+    <div class="updateCard">
+      <h4 class="pInfo">Personal Info</h4>
       <form method="POST" action="/update-dashboard">
-        <div class="personalInfo">
-            <div>
+        <div style="margin: 10px;" class="personalInfo">
+            <p style="margin-bottom: 10px;">Username:  {{userResults.username}}</p>
             <label for="first_name">First Name</label>
-            <input id='first_name' type="text" name="first_name" value="{{userResults.first_name}}">
-            </div>
-            <div>
-                <label for="last_name">Last Name</label>
-                <input id="last_name" type="text" name="last_name" value="{{userResults.last_name}}">
-            </div>
-            <div>
-                <label for"email"> Email</label>
-                <input id="email" type="text" name="email" value="{{userResult.email}}">
-            </div>
-            <div>
-                <p>Username {{userResults.username}}</p>
-            </div>
-        </div>
-        </form>
+            <input id='first_name' type="text" name="first_name" value="{{userResults.first_name}}"><br>
 
-        <form method="POST" action="/update-dashboard">
-        <div class="personalInfo">
-            <div>
-                <label for="age">Age</label>
-                <input id="age" type="number" name="age" value="{{userResults.age}}" Years Old>
-            </div>
-            <div>
-                <label for="weight">Weight</label>
-                <input id="weight" type="number" name="weight" value="{{userResults.weight}}" Pounds>
-            </div> 
-            <div>
-                <label for="height">Height</label>
-                <input id="height" type="number" name="height" value="{{userResults.height}}" Inches>
-            </div>
-        </div>
-        </form>
+            <label for="last_name">Last Name</label>
+            <input id="last_name" type="text" name="last_name" value="{{userResults.last_name}}"><br>
+            
+            <label for"email"> Email</label>
+            <input id="email" type="text" name="email" value="{{userResult.email}}"><br>
+            
+            <label for="age">Age</label>
+            <input id="age" type="number" name="age" value="{{userResults.age}}" Years Old><br>
+            
+            <label for="weight">Weight</label>
+            <input id="weight" type="number" name="weight" value="{{userResults.weight}}" Pounds><br>
+            
+            <label for="height">Height</label>
+            <input id="height" type="number" name="height" value="{{userResults.height}}" Inches><br>
+            
+            <label for="goal">Your Target Goal</label>
+            <input id="goal" type="number" name="goal" value="{{userResults.goal}}" Pounds><br>
 
-        <form method="POST" action="/update-dashboard">
-        <div class="personalInfo">
-            <div>
-                <label for="goal">Your Target Goal</label>
-                <input id="goal" type="number" name="goal" value="{{userResults.goal}}" Pounds>
-            </div>
-        <div class="form-group">
+          <div class="form-group">
             <label for="activity_level">Activity Level:</label>
             <select class="form-control" id="activity_level" name="activity_level">
                 <option value="sedentary">Sedentary</option>
@@ -58,11 +39,27 @@
         </div>
         </div>
         </form>
+
+        {{!-- <form method="POST" action="/update-dashboard">
+        <div class="personalInfo">
+            
+        </div>
+        </form>
+
+        <form method="POST" action="/update-dashboard">
+        <div class="personalInfo">
+            <div>
+               
+            </div>
+       
+        </div>
+        </form> --}}
    
         <div class="caloriechart">
             {{!-- all of the chart information will go here  --}}
         </div>
+        
         <div>
-        <a href="/dashboard" class="btn">Save Changes</a>
+        <button class="btn"><a style="text-decoration: none; color: white;" href="/dashboard">Save Changes</a></button>
     </div>
 </body>

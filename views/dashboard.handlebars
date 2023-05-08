@@ -1,28 +1,28 @@
 <body>
-    <h1>Welcome, {{userResults.first_name}}! </h1>
+    <h1 class="welcome">Welcome, {{userResults.first_name}}! </h1>
     <h2>Please Complete Your Profile Below</h2>
-    <div class="card">
+    <div class="dashboardCard">
       <h3>Personal Info</h3>
         <div class="personalInfo">
-            <p>Name {{userResults.first_name}} {{userResults.last_name}}
-            <p>Username {{userResults.username}}</p>
-            <p>Email {{userResults.email}}</p>
+            <p>Name: {{userResults.first_name}} {{userResults.last_name}}
+            <p>Username: {{userResults.username}}</p>
+            <p>Email: {{userResults.email}}</p>
             {{!-- Content for name, age, and username goes here --}}
         </div>
         <div class="personalInfo">
-            <p>Age {{ userResults.age }} Years Old</p>
-            <p>Weight {{ userResults.weight }} Pounds</p>
-            <p>Height {{ userResults.height }} Inches</p>
+            <p>Age:{{ userResults.age }} Years Old</p>
+            <p>Weight: {{ userResults.weight }} Pounds</p>
+            <p>Height: {{ userResults.height }} Inches</p>
         </div>
         <div class="personalInfo">
-            <p> Goal {{ userResults.goal }} Pounds </p>
-            <p>Activity Level</p>
+            <p> Goal: {{ userResults.goal }} Pounds </p>
+            <p>Activity Level:</p>
         </div>
         </div>
         <div class="caloriechart">
             {{!-- all of the chart information will go here  --}}
         </div>
-        <div>
-        <a href="/update-dashboard" class="btn">Edit Profile</a>
+        <div class="dashboardBtn">
+        <button class="btn"><a style="text-decoration: none; color: white;" href="/update-dashboard">Edit Profile</a></button>
     </div>
 </body>

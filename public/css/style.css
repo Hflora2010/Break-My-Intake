@@ -24,7 +24,7 @@
   h2 {
     color: white;
     font-size: 2rem;
-    padding: 70px;
+    padding: 10px;
   }
 
   h3 {
@@ -307,14 +307,21 @@
 
 .meals {
     color: #245624;
-    margin: 20px 0 0px;
+    font-size: 1.5rem;
+    padding: 5px;
+    /* margin: 25px 0 0px; */
+}
+
+.selectMeal {
+  padding: 40px;
 }
 
 .dropText {
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 20px;
     padding: 8px;
     width: 300px;
-    cursor: pointer;
-    box-sizing: border-box
 }
 
 .food-container {
@@ -417,6 +424,79 @@ h3 {
   margin: auto;
   /* padding: 20px; */
   width: 90%;
+}
+
+/* dashboard.handlebars */
+
+.welcome {
+  padding: 20px;
+}
+
+.dashboardBtn {
+   margin-top: 40px;
+}
+
+.dashboardCard {
+  background: rgba(0, 9, 12, 0.233);
+    border-radius: 20px;
+    color: white;
+    height: 350px;
+    margin: auto;
+    padding: 10px;
+    width: 600px;
+}
+
+
+/* update-dashboard.handlebars */
+
+
+.completeProfile {
+  margin: 0 auto 20px;
+}
+
+.knowMore {
+  padding: 20px;
+}
+
+.pInfo {
+  font-size: 1.3rem;
+  padding: 5px;
+}
+
+.updateCard {
+  background: rgba(0, 9, 12, 0.233);
+    border-radius: 20px;
+    color: white;
+    height: 380px;
+    margin: auto;
+    padding: 10px;
+    width: 600px;
+}
+
+@media (max-width: 650px) {
+  .updateCard {
+    width: auto;
+  }
+}
+
+
+.personalInfo label {
+    color: #245624;
+    display: inline-block;
+    font-size: 1rem;
+    margin: auto 15px auto;
+    text-align: right;
+    width: 150px;
+}
+
+.personalInfo input,
+.personalInfo select {
+  box-sizing: border-box;
+  display: inline-block;
+  /* height: 25px; */
+  margin: auto 80px 10px auto;
+  padding: 3px;
+  width: 200px;
 }
 
 
