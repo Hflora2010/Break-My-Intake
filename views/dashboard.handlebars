@@ -4,18 +4,35 @@
     <div class="card">
         <h3>Personal Info</h3>
         <div class="personalInfo">
-            <p>Name {{userResults.first_name}} {{userResults.last_name}}
-            <p>Username {{userResults.username}}</p>
-            <p>Email {{userResults.email}}</p>
+            {{#if updatedData}}
+            <p>Name {{ updatedData.first_name}} {{updatedData.last_name}}
+            <p>Username {{ updatedData.username}}</p>
+            <p>Email {{ updatedData.email}}</p>
+            {{else}}
+            <p>Name {{ userResults.first_name}} {{userResults.last_name}}
+            <p>Username {{ userResults.username}}</p>
+            <p>Email {{ userResults.email}}</p>
+            {{/if}}
             {{!-- Content for name, age, and username goes here --}}
         </div>
         <div class="personalInfo">
+            {{#if updatedData}}
+            <p>Age {{ updatedData.age }} Years Old</p>
+            <p>Weight {{ updatedData.weight }} Pounds</p>
+            <p>Height {{ updatedData.height }} Inches</p>
+            {{else}}
             <p>Age {{ userResults.age }} Years Old</p>
             <p>Weight {{ userResults.weight }} Pounds</p>
             <p>Height {{ userResults.height }} Inches</p>
+            {{/if}}
         </div>
         <div class="personalInfo">
+            {{#if updatedData}}
+            <p> Goal {{ updatedData.goal }} Pounds </p>
+            <p>Activity Level {{ updatedData.activity_level }} </p>
+            {{else}}
             <p> Goal {{ userResults.goal }} Pounds </p>
+
             <p>Activity Level: {{userResults.activity_level}} </p>
         </div>
     </div>
