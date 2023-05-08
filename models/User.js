@@ -40,10 +40,13 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+
     // sex: {
     //   type: DataTypes.BOOLEAN,
     //   allowNull: false,
     // },
+
+
     weight: {
       type: DataTypes.DECIMAL,
       allowNull: true,
