@@ -2,7 +2,7 @@
     <h1>Welcome, {{userResults.first_name}}! </h1>
     <h2>Please Complete Your Profile Below</h2>
     <div class="card">
-      <h3>Personal Info</h3>
+        <h3>Personal Info</h3>
         <div class="personalInfo">
             {{#if updatedData}}
             <p>Name {{ updatedData.first_name}} {{updatedData.last_name}}
@@ -32,14 +32,14 @@
             <p>Activity Level {{ updatedData.activity_level }} </p>
             {{else}}
             <p> Goal {{ userResults.goal }} Pounds </p>
-            <p>Activity Level</p>
-            {{/if}}
+
+            <p>Activity Level: {{userResults.activity_level}} </p>
         </div>
-        </div>
-        <div class="caloriechart">
-            {{!-- all of the chart information will go here  --}}
-        </div>
-        <div>
+    </div>
+    <div class="caloriechart">
+        {{!-- all of the chart information will go here --}}
+    </div>
+    <div>
         <a href="/update-dashboard" class="btn">Edit Profile</a>
     </div>
 </body>
