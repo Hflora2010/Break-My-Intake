@@ -1,5 +1,5 @@
 <body>
-    <h1 class="welcome">Welcome, {{userResults.first_name}}! </h1>
+    <h1 style="padding: 5px" class="welcome">Welcome, {{userResults.first_name}}! </h1>
     <h2>Please Complete Your Profile Below</h2>
     <div class="dashboardCard">
       <h3>Personal Info</h3>
@@ -16,16 +16,18 @@
         </div>
         <div class="personalInfo">
             <p> Goal: {{ userResults.goal }} Pounds </p>
-            <p>Activity Level: {{userResults.activity_level}}</p>
-        </div>
-        </div>
-        <div class="caloriechart">
-        <p>you need <span id="bmr-value">{{ bmr }}</span> based on provided inforamtion and currently consumed <span id="calorie-count">{{ userResults.calorie_count}}</span> calories</p>
+            <p>Activity Level: {{userResults.activity_level}}</p><br>
+             <p style="color: #245624;">You need <span id="bmr-value">{{ bmr }}</span> calories, based on provided inforamtion, and have currently consumed <span id="calorie-count">{{ userResults.calorie_count}}</span> calories</p>
+             <div class="caloriechart">
+        
         <canvas id="chartJs"></canvas>
             {{!-- all of the chart information will go here  --}}
         </div>
+        </div>
+        </div>
+        
         <div class="dashboardBtn">
-        <button class="btn"><a style="text-decoration: none; color: white;" href="/update-dashboard">Edit Profile</a></button>
+        <button class="btn dashboardBtn"><a style="text-decoration: none; color: white;" href="/update-dashboard">Edit Profile</a></button>
     </div>
 </body>
 

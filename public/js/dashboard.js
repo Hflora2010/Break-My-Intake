@@ -19,8 +19,8 @@ console.log(remainingCalories)
         datasets: [
           {
             data: [calorieCount, remainingCalories],
-            backgroundColor: ["green", "blue"],
-            hoverBackgroundColor: ["green", "blue"],
+            backgroundColor: ["#b0bc62", "#402648"],
+            hoverBackgroundColor: ["#b0bc62","#402648"],
           },
         ],
         labels: ["Calorie Count", "Remaining Calories"],
