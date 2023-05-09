@@ -9,20 +9,20 @@ const updateFormHandler = async (event) => {
     const goal = document.querySelector('#goal').value.trim();
     const activity_level = document.querySelector('#activity_level').value;
 
-    console.log(age, weight, height, goal, activity_level);
-
-    const response = await fetch(`/api/update-profile`, {
-        method: 'PUT',
-        body: JSON.stringify({
-            age,
-            weight,
-            height,
-            goal,
-            activity_level
-        }),
-        headers: { 'Content-Type': 'application/json' },
-
-    });
+    if(first_name && last_name && email && weight && height && goal && email && activity_level) {
+        const response = await fetch('/update-dashboard', {
+            method: "POST",
+            body: JSON.stringify({
+                first_name,
+                last_name,
+                weight,
+                height,
+                goal,
+                email,
+                activity_level
+            }),
+            headers: { 'Content-Type': 'application/json' },
+        });
 
         console.log(response);
 
@@ -36,6 +36,4 @@ const updateFormHandler = async (event) => {
 }
 
 
-document
-    .querySelector('.personalInfo')
-    .addEventListener('submit', updateFormHandler)
+document.querySelector('.personInfo').addEventListener('sumbit', (updateFormHandler))

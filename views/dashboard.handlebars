@@ -16,11 +16,6 @@
             {{!-- Content for name, age, and username goes here --}}
         </div>
         <div class="personalInfo">
-            {{#if updatedData}}
-            <p>Age {{ updatedData.age }} Years Old</p>
-            <p>Weight {{ updatedData.weight }} Pounds</p>
-            <p>Height {{ updatedData.height }} Inches</p>
-            {{else}}
             <p>Age {{ userResults.age }} Years Old</p>
             <p>Weight {{ userResults.weight }} Pounds</p>
             <p>Height {{ userResults.height }} Inches</p>
@@ -32,14 +27,17 @@
             <p>Activity Level {{ updatedData.activity_level }} </p>
             {{else}}
             <p> Goal {{ userResults.goal }} Pounds </p>
-
-            <p>Activity Level: {{userResults.activity_level}} </p>
+            <p>Activity Level</p>
         </div>
-    </div>
-    <div class="caloriechart">
-        {{!-- all of the chart information will go here --}}
-    </div>
-    <div>
+        </div>
+        <div class="caloriechart">
+            {{!-- all of the chart information will go here  --}}
+        </div>
+        <div>
         <a href="/update-dashboard" class="btn">Edit Profile</a>
     </div>
 </body>
+
+{{!-- <script src="./js/dashboard.js"></script> --}}
+<script type="module" src="./js/dashboard.js"></script>
+

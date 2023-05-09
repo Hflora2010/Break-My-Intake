@@ -22,6 +22,7 @@
             </div>
         </div>
 
+        <form method="POST" action="/update-dashboard">
         <div class="personalInfo">
             <div>
                 <label for="age">Age</label>
@@ -36,32 +37,32 @@
                 <input id="height" type="number" name="height" value="{{userResults.height}}" Inches>
             </div>
         </div>
+        </form>
 
+        <form method="POST" action="/update-dashboard">
         <div class="personalInfo">
             <div>
                 <label for="goal">Your Target Goal</label>
                 <input id="goal" type="number" name="goal" value="{{userResults.goal}}" Pounds>
-        </div>
+            </div>
         <div class="form-group">
             <label for="activity_level">Activity Level:</label>
-            <select class="form-control" id="activity_level" name="activity_level">
+            <select id="activity_level" name="activity_level">
                 <option value="sedentary">Sedentary</option>
-                <option value="lightlyActive">Lightly Active</option>
-                <option value="moderatelyActive">Moderately Active</option>
-                <option value="veryActive">Very Active</option>
-                <option value="extraActive">Extra Active</option>
+                <option value="lightly active">Lightly Active</option>
+                <option value="moderately active">Moderately Active</option>
+                <option value="very active">Very Active</option>
+                <option value="extra active">Extra Active</option>
             </select>
         </div>
-    </div>
+        </div>
+        </form>
    
         <div class="caloriechart">
-            {{!-- all of the chart information will go here  --}}
+            {{!-- all of the chart information will go here --}}
         </div>
 
         <div>
         <a href="/dashboard" class="btn">Save Changes</a>
-        </div>
-        
-        </form>
     </div>
-    <script src="./js/update-dashboard.js"></script>
+</body>

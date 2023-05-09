@@ -420,3 +420,12 @@ h3 {
 }
 
 
+
+
+/* chart.js data */
+
+
+#chartJs {
+  height: 300px;
+  width: 300px;
+}
