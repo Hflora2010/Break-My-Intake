@@ -7,12 +7,14 @@ const updateFormHandler = async (event) => {
     const height = document.querySelector('#height').value.trim();
     const goal = document.querySelector('#goal').value.trim();
     const activity_level = document.querySelector('#activity_level').value;
+    const sex = document.querySelector('#sex').value;
 
     console.log(age, weight, height, goal, activity_level);
 
     const response = await fetch(`/api/update-profile`, {
         method: 'PUT',
         body: JSON.stringify({
+            sex,
             age,
             weight,
             height,
