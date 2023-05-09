@@ -432,15 +432,21 @@ h3 {
   padding: 20px;
 }
 
+.caloriechart {
+  height: 200px;
+  margin: auto;
+  width: 200px;
+}
+
 .dashboardBtn {
-   margin-top: 40px;
+   margin-top: 7px;
 }
 
 .dashboardCard {
   background: rgba(0, 9, 12, 0.233);
     border-radius: 20px;
     color: white;
-    height: 350px;
+    height: 520px;
     margin: auto;
     padding: 10px;
     width: 600px;
