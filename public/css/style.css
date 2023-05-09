@@ -155,9 +155,9 @@
 .main {
   background-color: rgba(0, 9, 12, 0.288);
   border-radius: 10px;
-  height: 70vh;
-  margin: 10px auto;
-  width: 70vw;
+  height: 65vh;
+  margin: 15px auto 45px;
+  width: 60vw;
 }
 
 .main h1 {
@@ -467,16 +467,11 @@ h3 {
   padding: 20px;
 }
 
-/* .pInfo {
-  font-size: 1.3rem;
-  padding: 5px;
-} */
-
 .updateCard {
   background: rgba(0, 9, 12, 0.233);
     border-radius: 20px;
     color: white;
-    height: 380px;
+    height: 400px;
     margin: auto;
     padding: 10px;
     width: 600px;
@@ -493,7 +488,6 @@ h3 {
     width: auto;
   }
 }
-
 
 .personalInfo label {
     color: #245624;
@@ -518,11 +512,7 @@ h3 {
   width: 180px;
 }
 
-
-
-
 /* chart.js data */
-
 
 #chartJs {
   height: 300px;
