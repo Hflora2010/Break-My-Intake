@@ -67,12 +67,15 @@ router.get('/dashboard', withAuth, async (req,res)=> {
 
         //serialize 
         const userResults = userData.get({ plain: true});
+        const bmr = userData.calculateBMR();
+        res.render('dashboard', { userResults, bmr: userData.calculateBMR() });
 
-        res.render('dashboard', { userResults });
     } catch (err) {
         res.status(400).json(err);
     }
 });
+
+
 
 router.get('/update-dashboard', withAuth, async (req,res)=> {
 
@@ -92,6 +95,8 @@ router.get('/update-dashboard', withAuth, async (req,res)=> {
         res.status(400).json(err);
     }
 });
+
+
 
 router.get('/food', withAuth, async (req, res) => {
     try {

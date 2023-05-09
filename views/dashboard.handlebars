@@ -10,7 +10,7 @@
             {{!-- Content for name, age, and username goes here --}}
         </div>
         <div class="personalInfo">
-            <p>Age:{{ userResults.age }} Years Old</p>
+            <p>Age: {{ userResults.age }} Years Old {{userResults.sex}}</p>
             <p>Weight: {{ userResults.weight }} Pounds</p>
             <p>Height: {{ userResults.height }} Inches</p>
         </div>
@@ -20,9 +20,15 @@
         </div>
         </div>
         <div class="caloriechart">
+        <p>you need <span id="bmr-value">{{ bmr }}</span> based on provided inforamtion and currently consumed <span id="calorie-count">{{ userResults.calorie_count}}</span> calories</p>
+        <canvas id="chartJs"></canvas>
             {{!-- all of the chart information will go here  --}}
         </div>
         <div class="dashboardBtn">
         <button class="btn"><a style="text-decoration: none; color: white;" href="/update-dashboard">Edit Profile</a></button>
     </div>
 </body>
+
+{{!-- <script src="./js/dashboard.js"></script> --}}
+<script type="module" src="./js/dashboard.js"></script>
+

@@ -5,12 +5,13 @@
     "first_name": "Hailey",
     "last_name": "Flora",
     "age": "31",
-    "sex": "F",
+    "sex": "female",
     "height": "63",
     "weight": "127",
     "goal": "125",
     "calorie_count": "2000",
-    "email": "Haileycflora@gmail.com"
+    "email": "Haileycflora@gmail.com",
+    "activity_level": "lightly active"
 
 },
 {
@@ -19,11 +20,41 @@
     "first_name": "Josh",
     "last_name": "Molyneaux",
     "age": "28",
-    "sex": "M",
+    "sex": "male",
     "height": "72",
     "weight": "160",
     "goal": "170",
     "calorie_count": "1500",
-    "email": "Josh@email.com"
-}
+    "email": "Josh@email.com",
+    "activity_level": "lightly active"
+},
+{
+    "username": "admin",
+    "password": "admin123!",
+    "first_name": "admin",
+    "last_name": "penal",
+    "age": "28",
+    "sex": "male",
+    "height": "723",
+    "weight": "175",
+    "goal": "200",
+    "calorie_count": "0",
+    "email": "admin@penal.com",
+    "activity_level": "lightly active"
+},
+{
+    "id": 123,
+    "username": "jdoe",
+    "password": "password123",
+    "first_name": "John",
+    "last_name": "Doe",
+    "age": 30,
+    "weight": 175.5,
+    "height": 68.5,
+    "goal": 2000,
+    "calorie_count": 1500,
+    "email": "jdoe@example.com",
+    "sex": "male",
+    "activity_level": "lightly active"
+  }
 ]
