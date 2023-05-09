@@ -6,6 +6,7 @@ router.put('/', withAuth, async (req,res)=> {
 console.log('this is the api route for update-profile')
     try {
         const userData = await User.update({
+            sex: req.body.sex,
             age: req.body.age,
             weight: req.body.weight,
             height: req.body.height,
