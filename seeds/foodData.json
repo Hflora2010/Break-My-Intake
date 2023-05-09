@@ -156,12 +156,6 @@
         "quanity": 1
     },
     {
-        "food_name": "Pretzels",
-        "calories": 150,
-        "serving_size": 1,
-        "quanity": 1
-    },
-    {
         "food_name": "Plain Seltzer",
         "calories": 0,
         "serving_size": 1,
