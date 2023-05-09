@@ -3,7 +3,7 @@
         "food_name": "Banana",
         "calories": 100,
         "serving_size": 1,
-        "quanity": 0
+        "quanity": 1
     },
     {
         "food_name": "Avocado",
@@ -14,6 +14,168 @@
     {
         "food_name": "Apple",
         "calories": 125,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Chicken Breast",
+        "calories": 165,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Broccoli",
+        "calories": 45,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Brussel Sprouts",
+        "calories": 56,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Sourdough Toast",
+        "calories": 69,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Brown Rice",
+        "calories": 218,
+        "serving_size": 1,
+        "quanity": 1 
+    },
+    {
+        "food_name": "Egg",
+        "calories": 70,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Strawberries",
+        "calories": 53,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Blueberries",
+        "calories": 80,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "White Rice",
+        "calories": 218,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Filet Mignon",
+        "calories": 278,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Bacon",
+        "calories": 161,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Sausage",
+        "calories": 142,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Peppers",
+        "calories": 30,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Onions",
+        "calories": 40,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Pork",
+        "calories": 297,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Ground Turkey",
+        "calories": 166,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Sweet Potato",
+        "calories": 103,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Greek Yogurt",
+        "calories": 80,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Potato",
+        "calories": 110,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Mushrooms",
+        "calories": 15,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Lettuce",
+        "calories": 10,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Tomato",
+        "calories": 43,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Pretzels",
+        "calories": 163,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Pretzels",
+        "calories": 150,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Plain Seltzer",
+        "calories": 0,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Plain Bagel",
+        "calories": 350,
+        "serving_size": 1,
+        "quanity": 1
+    },
+    {
+        "food_name": "Cream Cheese",
+        "calories": 99,
         "serving_size": 1,
         "quanity": 1
     }
