@@ -6,7 +6,7 @@ const withAuth = require ('../utils/auth');
 router.get('/', async (req, res) => {
     // tries to render homepage handlebar, if unable to then throws an error 
     try {
-        res.render('homepage');
+        res.render('homepage', {logged_in: req.session.logged_in});
     } catch (err) {
         res.status(500).json(err);
     }
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/calculatebmi', async (req, res) => {
 
     try {
-        res.render('calculatebmi');
+        res.render('calculatebmi', {logged_in: req.session.logged_in});
     } catch (err) {
         res.status(500).json(err);
     }
@@ -42,7 +42,7 @@ router.get('/login', (req, res) => {
         return;
     }
 
-    res.render('login');
+    res.render('login', {logged_in: req.session.logged_in});
 });
 
 router.get('/signup', (req, res) => {
@@ -52,7 +52,7 @@ router.get('/signup', (req, res) => {
         return;
     }
 
-    res.render('signup');
+    res.render('signup', {logged_in: req.session.logged_in});
 });
 
 router.get('/dashboard', withAuth, async (req,res)=> {
@@ -68,7 +68,8 @@ router.get('/dashboard', withAuth, async (req,res)=> {
         //serialize 
         const userResults = userData.get({ plain: true});
         const bmr = userData.calculateBMR();
-        res.render('dashboard', { userResults, bmr: userData.calculateBMR() });
+        res.render('dashboard', { userResults, bmr: userData.calculateBMR(), 
+                                    logged_in: req.session.logged_in });
 
     } catch (err) {
         res.status(400).json(err);
@@ -90,7 +91,7 @@ router.get('/update-dashboard', withAuth, async (req,res)=> {
         //serialize 
         const userResults = userData.get({ plain: true});
 
-        res.render('update-dashboard', { userResults });
+        res.render('update-dashboard', { userResults, logged_in: req.session.logged_in });
     } catch (err) {
         res.status(400).json(err);
     }
@@ -110,6 +111,7 @@ router.get('/food', withAuth, async (req, res) => {
         console.log(foodResults)
         res.render('food', {
             foodResults,
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(400).json(err);

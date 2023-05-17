@@ -1,7 +1,8 @@
-<h1 style="padding: 40px;">Let Us Know a Little Bit More, {{userResults.first_name}}! </h1>
-<h2>Please Complete Your Profile Below</h2>
+<body>
+
 <div class="card updateCard">
-    <h4>Personal Info</h4>
+    <h1 style="padding: 15px 5px; font-size: 1.8rem;">Let us know a little bit more about you {{userResults.first_name}}! </h1>
+    <h3 style="margin-bottom: 18px;">Please complete your profile below</h3>
     <form class="form personalInfo">
         <div class="form-group">
             <label for="first_name">First Name:</label>
@@ -48,8 +49,20 @@
                 <option value="extra active">Extra Active</option>
             </select>
         </div>
-        <button style="margin: 40px;" class="btn" type="submit">Save Changes</button>
+        <div class="meal-btn"> 
+        <button style="margin: 65px 10px 0 0;" class="btn" type="submit">Save Changes</button>
+       <button style="margin: 65px 0 0 10px;" class="add-btn" ><a style="text-decoration: none; color: white;" href="/food">Add Meals</a></button>
+        </div>
     </form>
+    
 </div>
-
+<footer style="margin-top: 120px;" id="contact">
+        <p style="font-size: 1rem;" class="closing"><i class="fa fa-thin fa-copyright"></i> Break My Intake</p>
+    <div class="icons">
+      <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+      <a href=""><i class="fa-solid fa-envelope fa-2x"></i></a>
+      <a href="https://github.com/Hflora2010/Break-My-Intake"><i class="fa-brands fa-github fa-2x"></i></a>
+    </div>
+  </footer> 
 <script src="./js/update-dashboard.js"></script>
+</body>
