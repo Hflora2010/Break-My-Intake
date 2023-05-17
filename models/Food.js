@@ -23,7 +23,7 @@ Food.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        quanity: {
+        quantity: {
             type: DataTypes.INTEGER,
             allowNull: false
         },

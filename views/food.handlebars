@@ -5,7 +5,7 @@
     <h2 class="meals">Breakfast</h2>
     <div class="dropdown">
         <input style="font-size: 0.7rem; color: #245624;" type="text" id="droptxt" class="list dropText" readonly value="Click here for breakfast">
-        <div id="content" class="content">
+        <div id="content" class="content scroll">
             {{#each foodResults as |foodResults| }}
             <div class="list food-container">
                 <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.calories}}" />
@@ -19,7 +19,7 @@
     <h2 class="meals">Lunch</h2>
     <div class="dropdown">
         <input style="font-size: 0.7rem; color: #245624;" type="text" id="droptxt2" class="list dropText" readonly value="Click here for lunch">
-        <div id="content2" class="content">
+        <div id="content2" class="content scroll">
             {{#each foodResults as |foodResults| }}
             <div class="list food-container">
                 <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.calories}}" />
@@ -34,7 +34,7 @@
     <h2 class="meals">Dinner</h2>
     <div class="dropdown">
         <input style="font-size: 0.7rem; color: #245624;" type="text" id="droptxt3" class="list dropText" readonly value="Click here for dinner">
-        <div id="content3" class="content">
+        <div id="content3" class="content scroll">
             {{#each foodResults as |foodResults| }}
             <div class="list food-container">
                 <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.calories}}" />
@@ -49,7 +49,7 @@
     <h2 class="meals">Misc</h2>
     <div class="dropdown">
         <input style="font-size: 0.7rem; color: #245624;" type="text" id="droptxt4" class="list dropText" readonly value="Click here for misc">
-        <div id="content4" class="content">
+        <div id="content4" class="content scroll">
             {{#each foodResults as |foodResults| }}
             <div class="list">
                 <input type="checkbox" id="{{foodResults.food_name}}" class="list" value="{{foodResults.calories}}" />
